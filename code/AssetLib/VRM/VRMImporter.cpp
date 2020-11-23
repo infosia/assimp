@@ -1408,6 +1408,9 @@ void VRMImporter::InternReadFile(const std::string &pFile, aiScene *pScene, IOSy
     if (pScene->mNumMeshes == 0) {
         pScene->mFlags |= AI_SCENE_FLAGS_INCOMPLETE;
     }
+    
+    // Now rotate the root node by 180 degrees around the y axis to convert from VRM's to Assimp's coordinate system
+    aiMatrix4x4::RotationY(AI_DEG_TO_RAD(180.0f), pScene->mRootNode->mTransformation);
 }
 
 #endif // ASSIMP_BUILD_NO_GLTF_IMPORTER
