@@ -817,6 +817,11 @@ ADD_ASSIMP_IMPORTER( GLTF
   AssetLib/glTF2/glTF2Importer.h
 )
 
+ADD_ASSIMP_IMPORTER( VRM
+  AssetLib/VRM/VRMImporter.cpp
+  AssetLib/VRM/VRMImporter.h
+)
+
 ADD_ASSIMP_IMPORTER( 3MF
   AssetLib/3MF/D3MFImporter.h
   AssetLib/3MF/D3MFImporter.cpp
